@@ -22,4 +22,4 @@ var greeting = function(name){
 (function(name) {
     var greeting = 'Hello';
     console.log(greeting + ' ' + name);
-});
+})('Jordi');
