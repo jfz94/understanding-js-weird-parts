@@ -1,17 +1,28 @@
-function makeGreeting(language){
-    return function(firstname, lastname){
-        if(language === 'en'){
-            console.log('Hello ' + firstname + ' ' + lastname);
-        }
-        
-        if(language === 'es'){
-            console.log('Hola ' + firstname + ' ' + lastname);
-        }
-    }  
+function sayHiLater(){
+    var greeting = 'Hi!';
+
+    setTimeout(function(){
+        console.log(greeting);
+    },3000);
 }
 
-var greetEnglish = makeGreeting('en');
-var greetSpanish = makeGreeting('es');
+sayHiLater();
 
-greetEnglish('Jordi', 'Felip');
-greetSpanish('Jordi', 'Felip');
+// jquery uses function expressions and first-class functions!
+/*$("button").click(function(){
+
+});*/
+
+function tellMeWhenDone(callback){
+    var a = 1000; // some work
+    var b = 2000; // some work
+    callback(); // it runs the function I give it
+}
+
+tellMeWhenDone(function(){
+    console.log('I am done!');
+})
+
+tellMeWhenDone(function(){
+    console.log('All done...');
+})
