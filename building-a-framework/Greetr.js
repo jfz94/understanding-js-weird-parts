@@ -23,7 +23,7 @@
     // logger messages
     var logMessages = {
         en: 'Logged in',
-        es: 'Inició sesión'
+        es: 'Inicio sesion'
     };
     
     // prototype holds methods (to save memory space)
